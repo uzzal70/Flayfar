@@ -1,0 +1,5 @@
+.filter {
+  display: grid;
+  grid-template-columns: 250px repeat(1, 1fr);
+  grid-column-gap: 10px;
+}

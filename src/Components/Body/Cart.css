@@ -1,0 +1,12 @@
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.text-color {
+  border-color: red !important;
+  color: red !important;
+}
+.cartt {
+  margin-top: 30px;
+}
