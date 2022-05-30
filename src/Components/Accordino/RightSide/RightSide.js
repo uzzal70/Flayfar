@@ -9,6 +9,10 @@ import Button from '@mui/material/Button';
 import StorageIcon from '@mui/icons-material/Storage';
 import PaidIcon from '@mui/icons-material/Paid';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import RightSideCard from './RightSideCard';
+import ViewFear from './ViewFear';
 const RightSide = () => {
     const [expanded, setExpanded] = useState(false);
 
@@ -17,56 +21,52 @@ const RightSide = () => {
   };
     return (
         <div>
-            <div>
+            <div style={{marginTop:'20px'}}>
                 <Alert variant="outlined" severity="warning">Important: This destination may have COVID 19 travel restrictions in place, including specific restrictions for lodging. Check any national, 
-                    local, and health advisories for this destination before you book</Alert>
-                <div className='grid'>
-                    <h5 style={{ margin: "20px" }}>144 flight results, 6 Unique Airlines</h5>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        Short by
-                    </Typography>
-                    <Button variant="contained" ><PaidIcon/> Invoice Amount</Button>
-                    <Button variant="contained" >  <AirplanemodeActiveIcon/> Select</Button>
-                    <Button variant="contained" ><StorageIcon/> Cheapest first</Button>
-                </div>
+                  local, and health advisories for this destination before you book</Alert>
+                 <Box style={{margin:'30px 0px'}} className='box-margin' sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={3}>
+                        <Grid item xs>
+                        {/* <Item> */}
+                            
+                            {/* </Item> */}
+                            <h5>44 flight results, 6 Unique Airlines</h5>
+                        </Grid>
+                        <Grid item xs={8} >
+                        {/* <Item> */}
+                            <div>
+                                <Typography  sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                    Short by &nbsp;
+                                <Button variant="contained" ><PaidIcon/> Invoice Amount</Button>&nbsp;
+                                <Button variant="contained" > <AirplanemodeActiveIcon/> Select</Button>&nbsp;
+                                <Button variant="contained" ><StorageIcon /> Cheapest first</Button>
+                                </Typography>
+                                
+                            </div>
+                        {/* </Item> */}
+                        </Grid>
+                    </Grid>
+                    </Box>
             </div>
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1bh-content"
-                id="panel1bh-header"
-                >
-                <Typography sx={{ width: '33%', flexShrink: 0 }}>
-                    General settings
-                </Typography>
-                <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                <Typography>
-                    Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-                    Aliquam eget maximus est, id dignissim quam.
-                </Typography>
-                </AccordionDetails>
-            </Accordion>
+{/* ------------------ */}
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                 <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2bh-content"
-                id="panel2bh-header"
-                >
-                <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-                <Typography sx={{ color: 'text.secondary' }}>
-                    You are currently not an owner
-                </Typography>
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2bh-content"
+                    id="panel2bh-header"
+                    >
+                    <Typography sx={{ width: '100%', flexShrink: 0 }}>
+                         <RightSideCard/>
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                <Typography>
-                    Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-                    varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-                    laoreet.
-                </Typography>
+                    <Typography>
+                        <ViewFear/>
+                    </Typography>
                 </AccordionDetails>
             </Accordion>
+ {/* --------------------- */}
+            
             <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                 <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}

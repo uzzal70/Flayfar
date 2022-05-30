@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CreateIcon from '@mui/icons-material/Create';
@@ -7,7 +8,7 @@ import FilterVintageIcon from '@mui/icons-material/FilterVintage';
 
 const CartButton = () => {
     return (
-        <div style={{ display: "flex", marginTop:"50px", marginLeft:"50px"}}>
+        <div style={{ display: "flex", marginTop:"50px", marginLeft:"10px"}}>
             <Typography>
                 <Button variant="outlined" className='text-color'> <FilterVintageIcon/>Add To Saved</Button>
             </Typography>

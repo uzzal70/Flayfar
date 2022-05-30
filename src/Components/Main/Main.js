@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main.css';
-// import PropTypes from 'prop-types';
+import logo from './Logo.png';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,32 +9,25 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-// import { Search } from '@mui/icons-material';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-// import TextField from '@mui/material/TextField';
 import BackupTableIcon from '@mui/icons-material/BackupTable';
 import Cart from '../Body/Cart';
 import Accordino from '../Accordino/Accordino';
-// import Test from '../Accordino/Test';
+import Profile from './Profile';
 const drawerWidth = 240;
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginLeft: 0,
   width: '100%',
@@ -79,11 +72,18 @@ const Main = (props) => {
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+    <div className='Icon-style'>
+       <InboxIcon className='Icon' /> 
+       <MailIcon className='Icon' />
+       <InboxIcon className='Icon' /> 
+       <MailIcon className='Icon' />
+      {/* <Toolbar /> */}
+      {/* <Divider /> */}
+      {/* <List className='Icon-style'>
+          <InboxIcon className='Icon' /> 
+        <MailIcon className='Icon' />
+        </List> */}
+        {/* {['Inbox', 'Starred', 'Send email', 'Draftsss'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -92,10 +92,10 @@ const Main = (props) => {
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
-        ))}
-      </List>
+        ))} */}
+      
       <Divider />
-      <List>
+      {/* <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -106,7 +106,7 @@ const Main = (props) => {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
@@ -117,14 +117,21 @@ const Main = (props) => {
         <>
         <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar
+          <AppBar
             position="fixed"
             sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
             }}
         >
-        <Toolbar className='topHeader'>
+            <Box
+              component="span"
+              m={1}
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Toolbar className='topHeader'>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -134,24 +141,30 @@ const Main = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className='flyway' variant="h6" noWrap component="div">
-            Flyway Travel
-            </Typography>
-            
-                    
-            <Search>
+          <Typography className='flyway' noWrap component="div">
+              <img src={logo} alt="log" />
+            </Typography>   
+            <Search className='search-color'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Name/PNR/Ticket no/Booking Ref"
               inputProps={{ 'aria-label': 'search' }}
             />
             </Search>
-                    <Button variant="outlined" className='button'><BackupTableIcon/>Flyway APISandbox</Button>
-            {/* <Button variant="contained">Contained</Button>         */}
-                    
-        </Toolbar>
+              <Button variant="outlined" className='button'>
+                <BackupTableIcon />Flyway APISandbox
+              </Button>
+            
+              </Toolbar>
+              <Button>
+                <Profile style={{margin:"10"}}/>
+              </Button>
+              <Button variant="contained" color="primary" sx={{ height: 40 }}>
+                BDT 36,500
+              </Button>
+            </Box>
       </AppBar>
       <Box
         component="nav"
@@ -174,7 +187,7 @@ const Main = (props) => {
         >
           {drawer}
         </Drawer>
-        <Drawer
+          <Drawer
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
@@ -189,37 +202,11 @@ const Main = (props) => {
         component="main"
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
-                <Toolbar />
+      <Toolbar />
                 {/* ----------------- */}
             <Cart></Cart>
-            <Typography paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-            enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-            imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-            Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-            Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-            adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-            nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-            leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-            feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-            sapien faucibus et molestie ac.
-            </Typography>
-            <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-            eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-            neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-            tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-            sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-            tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-            et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-            tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-            eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-            posuere sollicitudin aliquam ultrices sagittis orci a.
-            </Typography>
-                    <Accordino></Accordino>
+            
+            <Accordino></Accordino>
             </Box>
             </Box>
             

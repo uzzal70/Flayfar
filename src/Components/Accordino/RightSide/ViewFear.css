@@ -1,0 +1,13 @@
+.viewfear{
+    /* padding: 10px; */
+    border: 1px solid red !important;
+    font-size: 14px;
+}
+h3,del{
+    padding: 0px;
+    margin: 0px;
+}
+.viewfear .MuiSvgIcon-root{
+margin-top:10px !important ;
+
+}

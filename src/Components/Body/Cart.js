@@ -20,7 +20,7 @@ const bull = (
 const Cart = () => {
     return (
         <div className='cartt'>
-        <Card className='cart' sx={{ minWidth: 400 }}>
+        <Card className='cart'>
         <CardContent>
         <Typography variant="p" component="div">
           OneWay flight for 1 Adult(s) in Economy
@@ -45,10 +45,9 @@ const Cart = () => {
           New York - John F Kennedy Intl (JFK)
         </Typography>
         </CardContent>
-            <CartButton></CartButton>
-            
-            </Card>
-            <Token></Token>
+          <CartButton/>
+          </Card>
+          <Token></Token>
         </div>
     );
 };
