@@ -1,18 +1,20 @@
 .cart {
-  /* display: flex;
+    /* display: flex;
   flex-direction: row;
   justify-content: center; */
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem;
+    margin-top: 80px;
+    z-index: 200 !important;
 }
 .text-color {
-  border-color: red !important;
-  color: red !important;
-  min-width: 138px !important;
-  padding: 5px 5px !important;
+    border-color: red !important;
+    color: red !important;
+    min-width: 138px !important;
+    padding: 5px 5px !important;
 }
 .cartt {
-  margin-top: 150px;
+    z-index: 1200;
 }

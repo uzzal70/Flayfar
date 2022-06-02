@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
-import Typography from '@mui/material/Typography';
-
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
+import Typography from "@mui/material/Typography";
 
 const RengeSlider = () => {
     const [value, setValue] = useState([20, 37]);
     const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+        setValue(newValue);
+    };
     return (
         <div>
-            <Box sx={{ width: '100%' }}>
-                <Typography sx={{ width: '100%', flexShrink: 0 }}>
+            <Box sx={{ width: "100%" }}>
+                <Typography sx={{ width: "100%", flexShrink: 0 }}>
                     Outbound (DAC - JFK)
                 </Typography>
                 <Slider
