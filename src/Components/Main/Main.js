@@ -114,122 +114,114 @@ const Main = (props) => {
         window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <>
-            {/* Right side Header */}
+      <>
+        {/* Right side Header */}
 
-            <Box sx={{ display: "flex" }}>
-                <CssBaseline />
-                <AppBar
-                    // position="fixed"
-                    sx={{
-                        width: { sm: `calc(100% - ${drawerWidth}px)` },
-                        ml: { sm: `${drawerWidth}px` },
-                    }}
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <AppBar
+            // position="fixed"
+            sx={{
+              width: { sm: `calc(100% - ${drawerWidth}px)` },
+              ml: { sm: `${drawerWidth}px` },
+            }}
+          >
+            <Box
+              component="span"
+              m={1}
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Toolbar className="topHeader">
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: 'none' } }}
                 >
-                    <Box
-                        component="span"
-                        m={1}
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                    >
-                        <Toolbar className="topHeader">
-                            <IconButton
-                                color="inherit"
-                                aria-label="open drawer"
-                                edge="start"
-                                onClick={handleDrawerToggle}
-                                sx={{ mr: 2, display: { sm: "none" } }}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography
-                                className="flyway"
-                                noWrap
-                                component="div"
-                            >
-                                <img src={logo} alt="log" />
-                            </Typography>
-                            <Search className="search-color">
-                                <SearchIconWrapper>
-                                    <SearchIcon />
-                                </SearchIconWrapper>
-                                <StyledInputBase
-                                    placeholder="Name/PNR/Ticket no/Booking Ref"
-                                    inputProps={{ "aria-label": "search" }}
-                                />
-                            </Search>
-                            <Button variant="outlined" className="button">
-                                <BackupTableIcon />
-                                Flyway APISandbox
-                            </Button>
-                        </Toolbar>
-                        <Button>
-                            <Profile style={{ margin: "10" }} />
-                        </Button>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            sx={{ height: 40 }}
-                        >
-                            BDT 36,500
-                        </Button>
-                    </Box>
-                </AppBar>
-                <Box
-                    component="nav"
-                    sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-                    aria-label="mailbox folders"
-                >
-                    {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-                    <Drawer
-                        container={container}
-                        variant="temporary"
-                        open={mobileOpen}
-                        onClose={handleDrawerToggle}
-                        ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
-                        }}
-                        sx={{
-                            display: { xs: "block", sm: "none" },
-                            "& .MuiDrawer-paper": {
-                                boxSizing: "border-box",
-                                width: drawerWidth,
-                            },
-                        }}
-                    >
-                        {drawer}
-                    </Drawer>
-                    <Drawer
-                        variant="permanent"
-                        sx={{
-                            display: { xs: "none", sm: "block" },
-                            "& .MuiDrawer-paper": {
-                                boxSizing: "border-box",
-                                width: drawerWidth,
-                            },
-                        }}
-                        open
-                    >
-                        {drawer}
-                    </Drawer>
-                </Box>
-                <Box
-                    className="RightSideheader"
-                    component="main"
-                    sx={{
-                        flexGrow: 1,
-                        p: 3,
-                        width: { sm: `calc(100% - ${drawerWidth}px)` },
-                    }}
-                >
-                    <Toolbar />
-                    {/* ----------------- */}
-                    <Cart />
-                    <Accordino />
-                </Box>
+                  <MenuIcon />
+                </IconButton>
+                <Typography className="flyway" noWrap component="div">
+                  <img src={logo} alt="log" />
+                </Typography>
+                <Search className="search-color">
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Name/PNR/Ticket no/Booking Ref"
+                    inputProps={{ 'aria-label': 'search' }}
+                  />
+                </Search>
+                <Button variant="outlined" className="flywayButton">
+                  <BackupTableIcon />
+                  Flyway APISandbox
+                </Button>
+              </Toolbar>
+              <Button>
+                <Profile style={{ margin: '10' }} />
+              </Button>
+              <Button variant="contained" color="primary" sx={{ height: 40 }}>
+                BDT 36,500
+              </Button>
             </Box>
-        </>
+          </AppBar>
+          <Box
+            component="nav"
+            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+            aria-label="mailbox folders"
+          >
+            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+            <Drawer
+              container={container}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: 'block', sm: 'none' },
+                '& .MuiDrawer-paper': {
+                  boxSizing: 'border-box',
+                  width: drawerWidth,
+                },
+              }}
+            >
+              {drawer}
+            </Drawer>
+            <Drawer
+              variant="permanent"
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+                '& .MuiDrawer-paper': {
+                  boxSizing: 'border-box',
+                  width: drawerWidth,
+                },
+              }}
+              open
+            >
+              {drawer}
+            </Drawer>
+          </Box>
+          <Box
+            className="RightSideheader"
+            component="main"
+            sx={{
+              flexGrow: 1,
+              p: 3,
+              width: { sm: `calc(100% - ${drawerWidth}px)` },
+            }}
+          >
+            <Toolbar />
+            {/* ----------------- */}
+            <Cart />
+            <Accordino />
+          </Box>
+        </Box>
+      </>
     );
 };
 

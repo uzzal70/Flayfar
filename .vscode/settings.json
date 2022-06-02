@@ -1,20 +1,21 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    },
-    "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#ff0080",
-        "terminalCursor.foreground": "#ffff00"
-    },
-    "editor.renderWhitespace": "boundary",
-    "editor.fontSize": 20,
-    "files.autoSave": "afterDelay",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "editor.cursorBlinking": "expand",
-    "editor.cursorWidth": 2,
-    "editor.cursorSurroundingLines": 8,
-    "terminal.integrated.cursorWidth": 8
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ff0080",
+    "terminalCursor.foreground": "#ffff00"
+  },
+  "editor.renderWhitespace": "boundary",
+  "editor.fontSize": 20,
+  "files.autoSave": "afterDelay",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorWidth": 2,
+  "editor.cursorSurroundingLines": 8,
+  "terminal.integrated.cursorWidth": 8,
+  "editor.tabSize": 8
 }

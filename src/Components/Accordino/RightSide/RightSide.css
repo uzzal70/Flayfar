@@ -25,3 +25,16 @@
 .top-margin {
   margin-top: 5px;
 }
+.view-fear {
+  background-color: blue !important;
+}
+.view-fareLine {
+  transform: 'rotate(90deg)';
+  border-bottom: 3px dotted rgb(91, 95, 91);
+  width: 50px;
+  margin: 0px;
+  padding: 0px;
+  /* margin-right: 10px; */
+  /* height: 10px; */
+  margin: auto;
+}

@@ -1,12 +1,12 @@
-import CardTravelIcon from "@mui/icons-material/CardTravel";
-import EventSeatIcon from "@mui/icons-material/EventSeat";
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import { FormControlLabel } from "@mui/material";
-import Button from "@mui/material/Button";
-import Checkbox from "@mui/material/Checkbox";
-import Grid from "@mui/material/Grid";
-import React from "react";
-import "./ViewFear.css";
+import CardTravelIcon from '@mui/icons-material/CardTravel';
+import EventSeatIcon from '@mui/icons-material/EventSeat';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import { FormControlLabel } from '@mui/material';
+import Button from '@mui/material/Button';
+import Checkbox from '@mui/material/Checkbox';
+import Grid from '@mui/material/Grid';
+import React from 'react';
+import './ViewFear.css';
 
 const ViewFear = () => {
   return (
@@ -15,7 +15,7 @@ const ViewFear = () => {
         <Grid
           item
           style={{
-            margin: "auto",
+            margin: 'auto',
           }}
           xs={2}
         >
@@ -23,7 +23,7 @@ const ViewFear = () => {
           <div>
             <FormControlLabel
               style={{
-                color: "red",
+                color: 'red',
               }}
               control={<Checkbox defaultChecked />}
             />
@@ -33,26 +33,26 @@ const ViewFear = () => {
         <Grid
           item
           style={{
-            margin: "auto",
-            padding: "20px",
+            margin: 'auto',
+            padding: '20px',
           }}
           xs={3}
         >
           <div>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <CardTravelIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Cancelation fee starting BDT 4899
@@ -60,18 +60,18 @@ const ViewFear = () => {
             </p>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <MonetizationOnIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Priority Check in
@@ -79,18 +79,18 @@ const ViewFear = () => {
             </p>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <CardTravelIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Priority Check in
@@ -98,18 +98,18 @@ const ViewFear = () => {
             </p>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <MonetizationOnIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Priority Check in
@@ -120,25 +120,25 @@ const ViewFear = () => {
         <Grid
           item
           style={{
-            margin: "auto",
+            margin: 'auto',
           }}
           xs={3}
         >
           <div>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <CardTravelIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Cancelation fee starting BDT 4899
@@ -146,18 +146,18 @@ const ViewFear = () => {
             </p>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <MonetizationOnIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Priority Check in
@@ -165,18 +165,18 @@ const ViewFear = () => {
             </p>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <CardTravelIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Priority Check in
@@ -184,18 +184,18 @@ const ViewFear = () => {
             </p>
             <p
               style={{
-                display: "flex",
-                justifyItems: "center",
+                display: 'flex',
+                justifyItems: 'center',
               }}
             >
               <MonetizationOnIcon
                 style={{
-                  marginRight: "10px",
+                  marginRight: '10px',
                 }}
               />
               <p
                 style={{
-                  marginTop: "auto",
+                  marginTop: 'auto',
                 }}
               >
                 Priority Check in
@@ -206,24 +206,24 @@ const ViewFear = () => {
         <Grid
           item
           style={{
-            margin: "auto",
+            margin: 'auto',
           }}
           xs={2}
         >
           <p
             style={{
-              display: "flex",
-              justifyItems: "center",
+              display: 'flex',
+              justifyItems: 'center',
             }}
           >
             <EventSeatIcon
               style={{
-                marginRight: "10px",
+                marginRight: '10px',
               }}
             />
             <p
               style={{
-                marginTop: "auto",
+                marginTop: 'auto',
               }}
             >
               W, V, 1
@@ -233,7 +233,7 @@ const ViewFear = () => {
         <Grid
           item
           style={{
-            margin: "auto",
+            margin: 'auto',
           }}
           xs={2}
         >
