@@ -1,40 +1,43 @@
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
 }
 .box-margin {
-  margin-top: 30px !important;
+    margin-top: 30px !important;
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  padding: 0 !important;
-  border: none !important;
+    padding: 0 !important;
+    border: none !important;
 }
 .button-grid {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .button-style {
-  border: 1px solid blue !important;
-  color: blue !important;
-  padding-top: 0px !important;
-  margin: 0px !important;
-  display: flex !important;
-  justify-content: center !important;
+    border: 1px solid blue !important;
+    color: blue !important;
+    padding-top: 0px !important;
+    margin: 0px !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 .top-margin {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 .view-fear {
-  background-color: blue !important;
+    background-color: blue !important;
 }
 .view-fareLine {
-  transform: 'rotate(90deg)';
-  border-bottom: 3px dotted rgb(91, 95, 91);
-  width: 50px;
-  margin: 0px;
-  padding: 0px;
-  /* margin-right: 10px; */
-  /* height: 10px; */
-  margin: auto;
+    transform: "rotate(180deg)";
+    border-bottom: 3px dotted rgb(91, 95, 91);
+    width: 50px;
+    margin: 0px;
+    padding: 0px;
+    /* margin-right: 10px; */
+    /* height: 10px; */
+    margin: auto;
+}
+.tooltipIconsSize .css-i4bv87-MuiSvgIcon-root {
+    font-size: 1rem;
 }

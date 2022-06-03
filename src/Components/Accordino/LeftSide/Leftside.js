@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
-import { FormControlLabel } from "@mui/material";
+import { Button, FormControlLabel, Stack } from "@mui/material";
 import RengeSlider from "./RengeSlider";
 
 const Leftside = () => {
@@ -105,6 +105,9 @@ const Leftside = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
+            <Grid justifyContent="center" alignItems="center">
+                <Button variant="contained">Filter Now</Button>
+            </Grid>
         </div>
     );
 };
