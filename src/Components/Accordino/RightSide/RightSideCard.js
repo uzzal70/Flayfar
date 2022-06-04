@@ -78,7 +78,7 @@ const RightSideCard = () => {
                             variant="outlined"
                             sx={{ width: "100px", padding: "0px" }}
                         >
-                            View Fear
+                            {!viewFear ? "View Fear" : "view Less"}
                         </Button>
                     </Grid>
                 </Grid>
