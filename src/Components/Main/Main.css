@@ -1,18 +1,10 @@
-.button {
-  background-color: aquamarine;
-  color: white;
-  border: 2px white solid;
-}
 .topHeader {
   margin: 50px;
 }
-.css-zxtyt4-MuiPaper-root-MuiAppBar-root {
-  width: calc(100% - 100px) !important;
-  margin-left: 100px !important;
-}
+
 .css-d9ml5t-MuiDrawer-docked .MuiDrawer-paper {
   box-sizing: border-box;
-  width: 100px !important;
+  /* width: 100px !important; */
 }
 .bg-color {
   background-color: #002441;
@@ -37,9 +29,7 @@ header {
   margin-right: 30px;
   color: #002441 !important;
 }
-/* .MuiSvgIcon-root{
-  color: white !important;
-} */
+
 .Icon-style {
   display: flex;
   flex-direction: column;
@@ -58,4 +48,10 @@ header {
 /* Header Z-index  */
 .RightSideheader {
   margin-top: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .RightSideheader {
+    margin-top: 200px;
+  }
 }

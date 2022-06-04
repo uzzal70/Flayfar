@@ -1,14 +1,17 @@
 .dashedLine {
-    transform: "rotate(180deg)";
-    border-left: dotted rgb(91, 95, 91);
-    margin-left: 10px;
-    height: 50px;
-    /* margin: auto; */
+  transform: 'rotate(180deg)';
+  border-left: dotted rgb(91, 95, 91);
+  margin-left: 10px;
+  height: 50px;
+  /* margin: auto; */
 }
 .travel-data .css-i4bv87-MuiSvgIcon-root {
-    font-size: 12px !important;
+  font-size: 12px !important;
 }
 .image-space img {
-    margin: 2px;
-    padding: 2px;
+  margin: 2px;
+  padding: 2px;
+}
+.MuiTabPanel-root {
+  padding: 0px !important;
 }
