@@ -16,21 +16,18 @@ const ListOfTabs = () => {
       <Box sx={{ width: '100%', typography: 'body1' }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                variant="scrollable"
-                scrollButtons="auto"
-                aria-label="scrollable auto tabs example"
-              >
-                <Tab value="1" label="Flight Details" />
-                <Tab value="2" label="Free Summery" />
-                <Tab value="3" label="Discount & Gross" />
-                <Tab value="4" label="Baggage" />
-                <Tab value="5" label="Cancelation" />
-                <Tab value="6" label="Date Change" />
-              </Tabs>
+            <TabList
+              onChange={handleChange}
+              variant="scrollable"
+              scrollButtons="auto"
+              aria-label="lab API tabs example"
+            >
+              <Tab value="1" label="Flight Details" />
+              <Tab value="2" label="Free Summery" />
+              <Tab value="3" label="Discount & Gross" />
+              <Tab value="4" label="Baggage" />
+              <Tab value="5" label="Cancelation" />
+              <Tab value="6" label="Date Change" />
             </TabList>
           </Box>
           <TabPanel value="1">
