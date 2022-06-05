@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import './RightSide.css';
+import './TravelCard.css';
 import Grid from '@mui/material/Grid';
-import FormGroup from '@mui/material/FormGroup';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -14,23 +13,34 @@ import Tooltip from '@mui/material/Tooltip';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import CurrencyExchangeSharpIcon from '@mui/icons-material/CurrencyExchangeSharp';
 import FlightIcon from '@mui/icons-material/Flight';
-import ListOfTabs from '../ListOfTabs/ListOfTabs';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ViewFear from './ViewFear';
+import { Card, Paper } from '@mui/material';
+import FlightDetails from './FlightDetails';
 import ViewFear from './ViewFear';
-import { Card } from '@mui/material';
-// import { display } from "@mui/system";
-const RightSideCard = () => {
+
+const TravelCard = () => {
   const [flightDetails, setFlightDetails] = useState(false);
   const [viewFear, setViewFear] = useState(false);
   return (
-    <Card>
+    <Paper elevation={10}>
       <Box
         sx={{
           flexGrow: 1,
           p: 2,
         }}
       >
+        <FormControlLabel
+          control={<Checkbox defaultChecked />}
+          sx={{
+            '@media (min-width: 481px) ': {
+              display: 'none',
+            },
+          }}
+        />
         <Grid container spacing={1}>
           <Grid
+            className="tcard"
             style={{ display: 'flex', flexDirection: 'row' }}
             lg={2.5}
             md={4}
@@ -38,25 +48,33 @@ const RightSideCard = () => {
             xs={6}
             sx={{
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2.5rem',
+                fontSize: '1.5rem',
+                pl: '.5rem',
                 // borderBottom: '2px solid black',
               },
             }}
           >
             {/* <FormGroup style={{ display: 'flex', flexDirection: 'row' }}> */}
-            <FormControlLabel control={<Checkbox defaultChecked />} />
-            <BrightnessHighIcon style={{ marginTop: '10px', color: 'red' }} />
+            <FormControlLabel
+              control={<Checkbox defaultChecked />}
+              sx={{
+                '@media (min-width: 300px) and (max-width: 480px)': {
+                  display: 'none',
+                },
+              }}
+            />
+            {/* <BrightnessHighIcon style={{ marginTop: '10px', color: 'red' }} /> */}
             <div style={{ marginTop: '10px' }}>
               <h6>Turkish Airlines</h6>
               <h6>TK713 | TK3</h6>
             </div>
             {/* </FormGroup> */}
           </Grid>
-          <Grid item lg={2} md={4} sm={6} xs={6}>
+          <Grid className="tcard" item lg={2} md={4} sm={6} xs={6}>
             <Typography
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2.5rem',
+                  fontSize: '1.5rem',
                   // borderBottom: '2px solid black',
                 },
               }}
@@ -65,14 +83,14 @@ const RightSideCard = () => {
               <h6>2017-05-24 10:30am </h6>
             </Typography>
           </Grid>
-          <Grid item lg={2} md={4} sm={6} xs={6}>
+          <Grid className="tcard" item lg={2} md={4} sm={6} xs={6}>
             <Typography
               sx={{
                 fontSize: '10px',
                 ml: '30%',
                 p: '0',
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '1.5rem',
+                  fontSize: '1rem',
                   mb: '2',
                 },
               }}
@@ -95,7 +113,7 @@ const RightSideCard = () => {
             <Typography
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '1.5rem',
+                  fontSize: '1rem',
                 },
                 fontSize: '10px',
                 ml: '20%',
@@ -106,6 +124,7 @@ const RightSideCard = () => {
             </Typography>
           </Grid>
           <Grid
+            className="tcard"
             item
             lg={2}
             md={4}
@@ -113,7 +132,7 @@ const RightSideCard = () => {
             xs={6}
             sx={{
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2.5rem',
+                fontSize: '1.5rem',
                 // borderBottom: '2px solid black',
               },
             }}
@@ -124,6 +143,7 @@ const RightSideCard = () => {
             </div>
           </Grid>
           <Grid
+            className="tcard"
             item
             lg={2}
             md={4}
@@ -131,17 +151,17 @@ const RightSideCard = () => {
             xs={6}
             sx={{
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1.5rem',
               },
             }}
           >
-            <div>
+            <Box>
               <del>BDT 22222</del>
               <br />
               <strong>BDT 11111</strong>
-            </div>
+            </Box>
           </Grid>
-          <Grid item lg={1} md={4} sm={6} xs={6}>
+          <Grid className="tcard" item lg={1} md={4} sm={6} xs={6}>
             <Button
               onClick={() => setViewFear(!viewFear)}
               variant="outlined"
@@ -150,7 +170,7 @@ const RightSideCard = () => {
                 width: '100px',
                 padding: ' 0px 1px',
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1rem',
                   width: '80%',
                 },
               }}
@@ -182,26 +202,26 @@ const RightSideCard = () => {
             <Button
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1rem',
                 },
               }}
             >
               Publish
             </Button>
             <Tooltip title="Mobile Wifi" arrow>
-              <CellWifiIcon />
+              <CellWifiIcon className="iconbar" />
             </Tooltip>
             &nbsp;
             <Tooltip title="Monitor" arrow>
-              <MonitorIcon />
+              <MonitorIcon className="iconbar" />
             </Tooltip>
             &nbsp;
             <Tooltip title="Settings" arrow>
-              <BrightnessHighIcon />
+              <BrightnessHighIcon className="iconbar" />
             </Tooltip>
             &nbsp;
             <Tooltip title="Settings" arrow>
-              <CurrencyExchangeSharpIcon />
+              <CurrencyExchangeSharpIcon className="iconbar" />
             </Tooltip>
           </Grid>
           <Grid
@@ -216,7 +236,8 @@ const RightSideCard = () => {
               <MonetizationOnIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
+                    mt: '.8rem',
                   },
                 }}
                 className="top-margin"
@@ -226,7 +247,7 @@ const RightSideCard = () => {
             <Typography
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1.2rem',
                 },
               }}
               style={{ paddingTop: '6px' }}
@@ -237,21 +258,22 @@ const RightSideCard = () => {
               <Button
                 onClick={() => setFlightDetails(!flightDetails)}
                 sx={{
+                  fontWeight: 'bold',
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '1.5rem',
+                    fontSize: '1rem',
                   },
                 }}
               >
-                Flight Details
+                Flight Details <ExpandMoreIcon />
               </Button>
             </div>
           </Grid>
         </Grid>
       </Box>
       {viewFear && <ViewFear />}
-      {flightDetails && <ListOfTabs />}
-    </Card>
+      {flightDetails && <FlightDetails />}
+    </Paper>
   );
 };
-// Accordino Function
-export default RightSideCard;
+
+export default TravelCard;

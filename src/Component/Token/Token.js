@@ -48,41 +48,6 @@ const Token = () => {
             <h5>BDT 5628</h5>
           </div>
         </div>
-        <div className="bdcard">
-          <AcUnitIcon className="AcUnitIcon" />
-          <div>
-            <p>Tk</p>
-            <h5>BDT 5628</h5>
-          </div>
-        </div>
-        <div className="bdcard">
-          <AcUnitIcon className="AcUnitIcon" />
-          <div>
-            <p>Tk</p>
-            <h5>BDT 5628</h5>
-          </div>
-        </div>
-        <div className="bdcard">
-          <AcUnitIcon className="AcUnitIcon" />
-          <div>
-            <p>Tk</p>
-            <h5>BDT 5628</h5>
-          </div>
-        </div>
-        <div className="bdcard">
-          <AcUnitIcon className="AcUnitIcon" />
-          <div>
-            <p>Tk</p>
-            <h5>BDT 5628</h5>
-          </div>
-        </div>
-        <div className="bdcard">
-          <AcUnitIcon className="AcUnitIcon" />
-          <div>
-            <p>Tk</p>
-            <h5>BDT 5628</h5>
-          </div>
-        </div>
       </div>
     </>
   );

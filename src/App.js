@@ -1,9 +1,10 @@
-import React from "react";
-import Main from "./Components/Main/Main";
+import React from 'react';
+import Navbar from './Component/NavBar/Navbar';
+// import Navbar from './Components/Nevbar/Navbar';
 function App() {
   return (
     <div>
-      <Main> </Main>
+      <Navbar></Navbar>
     </div>
   );
 }

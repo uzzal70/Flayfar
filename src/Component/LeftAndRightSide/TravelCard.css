@@ -31,8 +31,9 @@
 .view-fareLine {
   /* transform: 'rotate(180deg)'; */
   border-top: 3px dotted rgb(91, 95, 91);
-  width: 70%;
-  margin: auto;
+  width: 50%;
+  /* margin: auto; */
+  margin-top: 0.7rem;
   padding: 0px;
 }
 .tooltipIconsSize .css-i4bv87-MuiSvgIcon-root {
@@ -46,5 +47,10 @@ h6 {
   .tooltipIconsSize .css-i4bv87-MuiSvgIcon-root {
     font-size: 2rem;
   }
-  
+  .tcard {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .iconbar {
+    font-size: 1.5rem !important;
+  }
 }

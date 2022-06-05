@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
+// import Tabs from '@mui/material/Tabs';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
-import ListOfCard from '../RightSide/ListOfCard';
-const ListOfTabs = () => {
-  const [value, setValue] = useState('0');
+import TabCard from './TabCard';
+
+const FlightDetails = () => {
+  const [value, setValue] = useState('1');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   return (
     <div>
       <Box sx={{ width: '100%', typography: 'body1' }}>
@@ -31,22 +31,22 @@ const ListOfTabs = () => {
             </TabList>
           </Box>
           <TabPanel value="1">
-            <ListOfCard />
+            <TabCard />
           </TabPanel>
           <TabPanel value="2">
-            <ListOfCard />
+            <TabCard />
           </TabPanel>
           <TabPanel value="3">
-            <ListOfCard />
+            <TabCard />
           </TabPanel>
           <TabPanel value="4">
-            <ListOfCard />
+            <TabCard />
           </TabPanel>
           <TabPanel value="5">
-            <ListOfCard />
+            <TabCard />
           </TabPanel>
           <TabPanel value="6">
-            <ListOfCard />
+            <TabCard />
           </TabPanel>
         </TabContext>
       </Box>
@@ -54,4 +54,4 @@ const ListOfTabs = () => {
   );
 };
 
-export default ListOfTabs;
+export default FlightDetails;

@@ -1,0 +1,57 @@
+.topHeader {
+  margin: 50px;
+}
+
+.css-d9ml5t-MuiDrawer-docked .MuiDrawer-paper {
+  box-sizing: border-box;
+  /* width: 100px !important; */
+}
+.bg-color {
+  background-color: #002441;
+}
+header {
+  background-color: #002441 !important;
+}
+.MuiDrawer-paperAnchorLeft {
+  color: white !important;
+  background-color: #002441 !important;
+}
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  border-right: 1px solid white !important;
+}
+.flywayButton.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+  border: 1px solid white !important;
+  color: white !important;
+}
+.search-color {
+  background-color: #f0f8ff !important;
+  padding-right: 30px;
+  margin-right: 30px;
+  color: #002441 !important;
+}
+
+.Icon-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 50vh;
+}
+
+.Icon {
+  /* justify-content: auto;
+   */
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 3rem !important;
+  /* font-size: 200px; */
+}
+/* Header Z-index  */
+.RightSideheader {
+  margin-top: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .RightSideheader {
+    margin-top: 200px;
+  }
+}

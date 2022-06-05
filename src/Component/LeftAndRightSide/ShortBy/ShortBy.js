@@ -11,9 +11,10 @@ import PaidIcon from '@mui/icons-material/Paid';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import RightSideCard from './RightSideCard';
-import ViewFear from './ViewFear';
-const RightSide = () => {
+// import RightSideCard from './RightSideCard';
+// import ViewFear from './ViewFear';
+
+const ShortBy = () => {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -22,15 +23,7 @@ const RightSide = () => {
   return (
     <div>
       <div style={{ marginTop: '20px' }}>
-        <Alert
-          variant="outlined"
-          severity="warning"
-          sx={{
-            '@media (min-width: 300px) and (max-width: 480px)': {
-              fontSize: '1.5rem',
-            },
-          }}
-        >
+        <Alert variant="outlined" severity="warning">
           Important: This destination may have COVID 19 travel restrictions in
           place, including specific restrictions for lodging. Check any
           national, local, and health advisories for this destination before you
@@ -46,7 +39,7 @@ const RightSide = () => {
               <Typography
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '2rem',
+                    fontWeight: 'bold',
                   },
                 }}
               >
@@ -54,28 +47,35 @@ const RightSide = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={8}>
-              <Grid>
-                <Typography sx={{ fontSize: 16 }} color="text.secondary">
-                  Short by &nbsp;
-                  <Button variant="contained" sx={{ fontSize: 18 }}>
-                    <PaidIcon /> Invoice Amount
-                  </Button>
-                  &nbsp;
-                  <Button variant="contained" sx={{ fontSize: 18 }}>
-                    <AirplanemodeActiveIcon /> Select
-                  </Button>
-                  &nbsp;
-                  <Button variant="contained" sx={{ fontSize: 18 }}>
-                    <StorageIcon /> Cheapest first
-                  </Button>
+              <Grid container justifyContent="space-between">
+                <Typography sx={{ fontSize: 20 }} color="text.secondary">
+                  Short by
                 </Typography>
+                <Button variant="contained">
+                  <PaidIcon /> Invoice Amount
+                </Button>
+                <Button variant="contained">
+                  <AirplanemodeActiveIcon /> Select
+                </Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    '@media (min-width: 300px) and (max-width: 480px)': {
+                      ml: '5rem',
+                      mt: '3px',
+                      width: '100%',
+                    },
+                  }}
+                >
+                  <StorageIcon /> Cheapest first
+                </Button>
               </Grid>
             </Grid>
           </Grid>
         </Box>
       </div>
       {/* ------------------ */}
-      <Box sx={{ flexGrow: 1 }}>
+      {/* <Box sx={{ flexGrow: 1 }}>
         <Grid spacing={2}>
           <Grid item xs={8}>
             <RightSideCard />
@@ -90,9 +90,9 @@ const RightSide = () => {
             </Accordion>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </div>
   );
 };
 
-export default RightSide;
+export default ShortBy;

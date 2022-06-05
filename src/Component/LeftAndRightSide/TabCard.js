@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Typography from '@mui/material/Typography';
-// import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import FlightIcon from '@mui/icons-material/Flight';
 import EventSeatIcon from '@mui/icons-material/EventSeat';
 import LuggageIcon from '@mui/icons-material/Luggage';
@@ -14,12 +13,10 @@ import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import FlightRoundedIcon from '@mui/icons-material/FlightRounded';
 import UsbRoundedIcon from '@mui/icons-material/UsbRounded';
 import AddIcon from '@mui/icons-material/Add';
-import './ListOfCard.css';
-// import { padding } from '@mui/system';
+import './TabCard.css';
 import { Stack } from '@mui/material';
-// import ListOfTabs from '../ListOfTabs/ListOfTabs';
 
-const ListOfCard = () => {
+const TabCard = () => {
   return (
     <div>
       <Grid container sx={{ margin: 0, padding: 0 }} spacing={2}>
@@ -233,4 +230,4 @@ const ListOfCard = () => {
   );
 };
 
-export default ListOfCard;
+export default TabCard;
