@@ -1,7 +1,7 @@
 import CardTravelIcon from '@mui/icons-material/CardTravel';
 import EventSeatIcon from '@mui/icons-material/EventSeat';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import { Card, FormControlLabel } from '@mui/material';
+import { Box, Card, FormControlLabel, Paper, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
@@ -10,7 +10,7 @@ import './ViewFear.css';
 
 const ViewFear = () => {
   return (
-    <div className="viewfear">
+    <div className="viewfear ">
       <Grid container spacing={1}>
         <Grid
           item
@@ -22,8 +22,12 @@ const ViewFear = () => {
           sm={12}
           xs={12}
           sx={{
+            m: '0px',
+            p: '0px',
             '@media (min-width: 300px) and (max-width: 480px)': {
-              fontSize: '2rem',
+              fontSize: '1.5rem',
+              m: '0px',
+              p: '0px',
             },
           }}
         >
@@ -33,7 +37,7 @@ const ViewFear = () => {
                 <Checkbox
                   sx={{
                     '@media (min-width: 300px) and (max-width: 480px)': {
-                      fontSize: '3rem',
+                      fontSize: '1rem',
                     },
                   }}
                   defaultChecked
@@ -54,7 +58,7 @@ const ViewFear = () => {
           xs={12}
           sx={{
             '@media (min-width: 300px) and (max-width: 480px)': {
-              fontSize: '2rem',
+              fontSize: '1.1rem',
             },
           }}
         >
@@ -68,7 +72,7 @@ const ViewFear = () => {
               <CardTravelIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -92,7 +96,7 @@ const ViewFear = () => {
               <MonetizationOnIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -116,7 +120,7 @@ const ViewFear = () => {
               <CardTravelIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -140,7 +144,7 @@ const ViewFear = () => {
               <MonetizationOnIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -168,7 +172,7 @@ const ViewFear = () => {
           xs={12}
           sx={{
             '@media (min-width: 300px) and (max-width: 480px)': {
-              fontSize: '2rem',
+              fontSize: '1.1rem',
             },
           }}
         >
@@ -182,7 +186,7 @@ const ViewFear = () => {
               <CardTravelIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -206,7 +210,7 @@ const ViewFear = () => {
               <MonetizationOnIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -230,7 +234,7 @@ const ViewFear = () => {
               <CardTravelIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -254,7 +258,7 @@ const ViewFear = () => {
               <MonetizationOnIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '3rem',
+                    fontSize: '1.5rem',
                   },
                 }}
                 style={{
@@ -282,7 +286,7 @@ const ViewFear = () => {
           xs={12}
           sx={{
             '@media (min-width: 300px) and (max-width: 480px)': {
-              fontSize: '2rem',
+              fontSize: '1.1rem',
             },
           }}
         >
@@ -295,14 +299,14 @@ const ViewFear = () => {
             <EventSeatIcon
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '3rem',
+                  fontSize: '1.5rem',
                 },
               }}
               style={{
                 marginRight: '10px',
               }}
             />
-            <p>W, V, 1</p>
+            <Typography>W, V, 1</Typography>
           </p>
         </Grid>
         <Grid
@@ -320,12 +324,20 @@ const ViewFear = () => {
             },
           }}
         >
-          <del> BDT 20000 </del> <h3> BDT 20000 </h3>
+          <Box
+            sx={{
+              '@media (min-width: 300px) and (max-width: 480px)': {
+                fontSize: '1.5rem',
+              },
+            }}
+          >
+            <del> BDT 20000 </del> <h3> BDT 20000 </h3>
+          </Box>
           <Button
             variant="contained"
             sx={{
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1rem',
                 width: '100%',
               },
             }}

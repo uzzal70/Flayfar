@@ -11,8 +11,7 @@ import PaidIcon from '@mui/icons-material/Paid';
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-// import RightSideCard from './RightSideCard';
-// import ViewFear from './ViewFear';
+import './ShortBy.css';
 
 const ShortBy = () => {
   const [expanded, setExpanded] = useState(false);
@@ -21,7 +20,7 @@ const ShortBy = () => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div>
+    <Box>
       <div style={{ marginTop: '20px' }}>
         <Alert variant="outlined" severity="warning">
           Important: This destination may have COVID 19 travel restrictions in
@@ -29,69 +28,76 @@ const ShortBy = () => {
           national, local, and health advisories for this destination before you
           book
         </Alert>
-        <Box
-          style={{ margin: '30px 0px' }}
-          className="box-margin"
-          sx={{ flexGrow: 1 }}
-        >
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={12} md={4}>
+        <Box style={{ margin: '30px 0px' }} sx={{ flexGrow: 1 }}>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={3} lg={4}>
               <Typography
                 sx={{
+                  fontWeight: 'bold',
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontWeight: 'bold',
+                    fontSize: '1.3rem',
                   },
                 }}
               >
                 44 flight results, 6 Unique Airlines
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={8}>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={8}
+              lg={2}
+              sx={{
+                '@media (min-width: 300px) and (max-width: 1025px)': {
+                  display: 'none',
+                },
+              }}
+            ></Grid>
+            <Grid item xs={12} sm={12} md={9} lg={6}>
               <Grid container justifyContent="space-between">
-                <Typography sx={{ fontSize: 20 }} color="text.secondary">
-                  Short by
-                </Typography>
-                <Button variant="contained">
-                  <PaidIcon /> Invoice Amount
-                </Button>
-                <Button variant="contained">
-                  <AirplanemodeActiveIcon /> Select
-                </Button>
-                <Button
-                  variant="contained"
+                <Typography
+                  color="text.secondary"
                   sx={{
-                    '@media (min-width: 300px) and (max-width: 480px)': {
-                      ml: '5rem',
-                      mt: '3px',
-                      width: '100%',
+                    '@media (min-width: 320px) and (max-width: 480px)': {
+                      fontWeight: 'bold',
+                      // width: '50%',
                     },
                   }}
                 >
-                  <StorageIcon /> Cheapest first
-                </Button>
+                  Short by
+                </Typography>
+                <div>
+                  <Button variant="contained" className="ShortbyButton">
+                    <PaidIcon /> Invoice Amount
+                  </Button>
+                </div>
+                <div>
+                  <Button className="ShortbyButton" variant="contained">
+                    <AirplanemodeActiveIcon /> Select
+                  </Button>
+                </div>
+                <div>
+                  <Button
+                    className="ShortbyButton"
+                    variant="contained"
+                    sx={{
+                      '@media (min-width: 300px) and (max-width: 480px)': {
+                        ml: '5.3rem',
+                        mt: '2px',
+                        width: '17.8rem',
+                      },
+                    }}
+                  >
+                    <StorageIcon /> Cheapest first
+                  </Button>
+                </div>
               </Grid>
             </Grid>
           </Grid>
         </Box>
       </div>
-      {/* ------------------ */}
-      {/* <Box sx={{ flexGrow: 1 }}>
-        <Grid spacing={2}>
-          <Grid item xs={8}>
-            <RightSideCard />
-          </Grid>
-          <Grid item>
-            <Accordion
-              className="view-fear"
-              expanded={expanded === 'panel2'}
-              onChange={handleChange('panel2')}
-            >
-              <AccordionDetails></AccordionDetails>
-            </Accordion>
-          </Grid>
-        </Grid>
-      </Box> */}
-    </div>
+    </Box>
   );
 };
 

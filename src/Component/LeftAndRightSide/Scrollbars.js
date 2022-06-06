@@ -1,28 +1,21 @@
 import React, { useState } from 'react';
-import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import SwipeableViews from 'react-swipeable-views';
-import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 import TabCard from './TabCard';
-
-const FlightDetails = () => {
-  const theme = useTheme();
-  const [value, setValue] = useState('1');
+const Scrollbars = () => {
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  // const handleChangeIndex = (index) => {
-  //   setValue(index);
-  // };
+
   return (
     <Box
       sx={{
         '@media (min-width: 320px) and (max-width: 480px)': {
-          color: 'red',
-          width: '320px',
+          width: '100%',
         },
       }}
     >
@@ -34,14 +27,21 @@ const FlightDetails = () => {
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
           >
-            <Tab value="1" label="Flight Details" />
-            <Tab value="2" label="Free Summery " />
-            <Tab value="3" label="Free Summery " />
-            {/* <Tab value="3" label="Discount & Gross" /> */}
-            {/* <Tab value="3" label="Baggage" /> */}
-            {/* <Tab value="5" label="Cancelation" />
-            <Tab value="6" label="Date Change" /> */}
+            <Tab label="Item One" value="1" />
+            <Tab label="Item Two" value="2" />
+            <Tab label="Item Three" value="3" />
+            {/* <Tab label="Item Four" value="4" />
+            <Tab label="Item Five" value="5" /> */}
+            {/* <Tab label="Item Three" value="4" />
+            <Tab label="Item Three" value="5" /> */}
+            {/* <Tab label="Item One" value="1" />
+            <Tab label="Item Two" value="2" />
+            <Tab label="Item Three" value="3" /> */}
           </TabList>
+
+          {/* <TabPanel value="1">Item One</TabPanel>
+        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="3">Item Three</TabPanel> */}
 
           <TabPanel value="1">
             <TabCard />
@@ -52,10 +52,16 @@ const FlightDetails = () => {
           <TabPanel value="3">
             <TabCard />
           </TabPanel>
+          <TabPanel value="4">
+            <TabCard />
+          </TabPanel>
+          <TabPanel value="5">
+            <TabCard />
+          </TabPanel>
         </Box>
       </TabContext>
     </Box>
   );
 };
 
-export default FlightDetails;
+export default Scrollbars;

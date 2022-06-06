@@ -138,8 +138,10 @@ const LeftSide = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Grid justifyContent="center" alignItems="center">
-        <Button variant="contained">Filter Now</Button>
+      <Grid marginTop={'10px'} justifyContent="center" alignItems="center">
+        <Button sx={{ width: '100%' }} variant="contained">
+          Filter Now
+        </Button>
       </Grid>
     </Paper>
   );

@@ -9,7 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,7 +18,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
+import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
@@ -31,7 +34,7 @@ import Logo from './Logo.png';
 import { Button, Grid } from '@mui/material';
 import AddToSave from '../../Component/AddToSave/AddToSave';
 import LeftAndRightSide from '../LeftAndRightSide/LeftAndRightSide';
-import './Main.css';
+import './Navbar.css';
 // Left Side  Drawer start
 const drawerWidth = 200;
 
@@ -249,7 +252,7 @@ const Navbar = () => {
                 ...(open && { display: 'none' }),
               }}
             >
-              <MenuIcon />
+              <ArrowCircleRightOutlinedIcon sx={{ fontSize: '2rem' }} />
             </IconButton>
             <Box>
               <img src={Logo} alt="logo" />
@@ -293,7 +296,9 @@ const Navbar = () => {
                 color="inherit"
               >
                 <AccountCircle />
-                <span>Profile</span>
+                <span>
+                  Profile <ArrowDropDownIcon />
+                </span>
               </IconButton>
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -339,7 +344,9 @@ const Navbar = () => {
               {theme.direction === 'rtl' ? (
                 <ChevronRightIcon />
               ) : (
-                <ChevronLeftIcon />
+                <ArrowCircleLeftOutlinedIcon
+                  sx={{ color: 'white', fontSize: '2rem' }}
+                />
               )}
             </IconButton>
           </DrawerHeader>
@@ -359,6 +366,7 @@ const Navbar = () => {
                       minWidth: 0,
                       mr: open ? 3 : 'auto',
                       justifyContent: 'center',
+                      color: 'white',
                     }}
                   >
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -369,36 +377,13 @@ const Navbar = () => {
             ))}
           </List>
           <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? 'initial' : 'center',
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : 'auto',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
         </Drawer>
         <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
           <DrawerHeader />
           <Box
             marginBottom="1rem"
             sx={{
+              mt: '3rem',
               '@media (min-width: 300px) and (max-width: 480px)': {
                 mt: '6rem',
               },

@@ -14,14 +14,17 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import CurrencyExchangeSharpIcon from '@mui/icons-material/CurrencyExchangeSharp';
 import FlightIcon from '@mui/icons-material/Flight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import ViewFear from './ViewFear';
-import { Card, Paper } from '@mui/material';
-import FlightDetails from './FlightDetails';
+// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+// import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import { Paper } from '@mui/material';
+// import FlightDetails from './FlightDetails';
 import ViewFear from './ViewFear';
+import Scrollbars from './Scrollbars';
 
 const TravelCard = () => {
   const [flightDetails, setFlightDetails] = useState(false);
   const [viewFear, setViewFear] = useState(false);
+  // const viewf = ' <ArrowDropUpIcon/>';
   return (
     <Paper elevation={10}>
       <Box
@@ -65,8 +68,8 @@ const TravelCard = () => {
             />
             {/* <BrightnessHighIcon style={{ marginTop: '10px', color: 'red' }} /> */}
             <div style={{ marginTop: '10px' }}>
-              <h6>Turkish Airlines</h6>
-              <h6>TK713 | TK3</h6>
+              <h4>Turkish Airlines</h4>
+              <h5>TK713 | TK3</h5>
             </div>
             {/* </FormGroup> */}
           </Grid>
@@ -79,23 +82,26 @@ const TravelCard = () => {
                 },
               }}
             >
-              <h6>DAC, Dhaka</h6>
-              <h6>2017-05-24 10:30am </h6>
+              <h4>DAC, Dhaka</h4>
+              <h5>2017-05-24 10:30am </h5>
             </Typography>
           </Grid>
           <Grid className="tcard" item lg={2} md={4} sm={6} xs={6}>
             <Typography
               sx={{
-                fontSize: '10px',
-                ml: '30%',
+                fontSize: '14px',
+                ml: '20%',
                 p: '0',
                 '@media (min-width: 300px) and (max-width: 480px)': {
                   fontSize: '1rem',
-                  mb: '2',
+                  // mb: '2',
+                  ml: '9%',
+                  position: 'absolute',
+                  marginTop: '1px',
                 },
               }}
             >
-              34 h 45m
+              <h5>34 h 45m</h5>
             </Typography>
             <Grid container sx={{ flexGrow: 1 }}>
               <FlightIcon
@@ -104,23 +110,34 @@ const TravelCard = () => {
                 }}
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '2rem',
+                    fontSize: '1.5rem',
+                    marginTop: '15px',
                   },
                 }}
               />
-              <div className="view-fareLine"></div>
+              <Box
+                className="view-fareLine"
+                sx={{
+                  '@media (min-width: 300px) and (max-width: 480px)': {
+                    marginTop: '1.5rem',
+                  },
+                }}
+              ></Box>
             </Grid>
             <Typography
               sx={{
+                fontSize: '14px',
+                ml: '15%',
                 '@media (min-width: 300px) and (max-width: 480px)': {
                   fontSize: '1rem',
+                  ml: '9%',
+                  pb: '5px',
+                  position: 'absolute',
+                  marginTop: '-12px',
                 },
-                fontSize: '10px',
-                ml: '20%',
-                p: '0',
               }}
             >
-              2 Stop Via DEL
+              <h5>2 Stop Via DEL</h5>
             </Typography>
           </Grid>
           <Grid
@@ -138,8 +155,8 @@ const TravelCard = () => {
             }}
           >
             <div>
-              <h6>JKF, New York</h6>
-              <h6>2017-05-24 10:30am</h6>
+              <h4>JKF, New York</h4>
+              <h5>2017-05-24 10:30am</h5>
             </div>
           </Grid>
           <Grid
@@ -156,12 +173,14 @@ const TravelCard = () => {
             }}
           >
             <Box>
-              <del>BDT 22222</del>
+              <strong>
+                <del>BDT 22222</del>
+              </strong>
               <br />
               <strong>BDT 11111</strong>
             </Box>
           </Grid>
-          <Grid className="tcard" item lg={1} md={4} sm={6} xs={6}>
+          <Grid className="tcard " item lg={1} md={4} sm={6} xs={6}>
             <Button
               onClick={() => setViewFear(!viewFear)}
               variant="outlined"
@@ -172,6 +191,8 @@ const TravelCard = () => {
                 '@media (min-width: 300px) and (max-width: 480px)': {
                   fontSize: '1rem',
                   width: '80%',
+                  mt: '20px',
+                  ml: '10px',
                 },
               }}
             >
@@ -182,15 +203,17 @@ const TravelCard = () => {
         <Grid
           container
           className="button-grid"
-          style={{ marginTop: '20px' }}
+          style={{ marginTop: '2px' }}
           spacing={1}
         >
           <Grid
             lg={6}
             md={6}
-            sm={12}
+            sm={5}
             xs={12}
             sx={{
+              m: '0px',
+              p: '0px',
               '@media (min-width: 300px) and (max-width: 480px)': {
                 fontSize: '2rem',
                 ml: '20%',
@@ -227,23 +250,32 @@ const TravelCard = () => {
           <Grid
             lg={6}
             md={6}
-            sm={12}
+            sm={7}
             xs={12}
             item
-            style={{ display: 'flex', justifyContent: 'center' }}
+            sx={{
+              display: 'flex',
+              justifyContent: 'right',
+              '@media (min-width: 300px) and (max-width: 480px)': {
+                fontSize: '1.5rem',
+                // mt: '0.5rem',
+                display: 'flex',
+                justifyContent: 'center',
+              },
+            }}
           >
-            <div>
+            <Box>
               <MonetizationOnIcon
                 sx={{
                   '@media (min-width: 300px) and (max-width: 480px)': {
                     fontSize: '1.5rem',
-                    mt: '.8rem',
+                    mt: '0.5rem',
                   },
                 }}
                 className="top-margin"
                 style={{ color: 'blue' }}
               />
-            </div>
+            </Box>
             <Typography
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
@@ -254,24 +286,25 @@ const TravelCard = () => {
             >
               Refundable
             </Typography>
-            <div>
+            <Box>
               <Button
                 onClick={() => setFlightDetails(!flightDetails)}
                 sx={{
                   fontWeight: 'bold',
-                  '@media (min-width: 300px) and (max-width: 480px)': {
+                  '@media (min-width: 320px) and (max-width: 480px)': {
                     fontSize: '1rem',
                   },
                 }}
               >
                 Flight Details <ExpandMoreIcon />
               </Button>
-            </div>
+            </Box>
           </Grid>
         </Grid>
       </Box>
       {viewFear && <ViewFear />}
-      {flightDetails && <FlightDetails />}
+      {flightDetails && <Scrollbars />}
+      {/* <Scrollbars></Scrollbars> */}
     </Paper>
   );
 };

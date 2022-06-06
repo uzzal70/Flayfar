@@ -14,11 +14,11 @@ import FlightRoundedIcon from '@mui/icons-material/FlightRounded';
 import UsbRoundedIcon from '@mui/icons-material/UsbRounded';
 import AddIcon from '@mui/icons-material/Add';
 import './TabCard.css';
-import { Stack } from '@mui/material';
+import { Box, Paper, Stack } from '@mui/material';
 
 const TabCard = () => {
   return (
-    <div>
+    <Box>
       <Grid container sx={{ margin: 0, padding: 0 }} spacing={2}>
         <Grid
           item
@@ -26,6 +26,9 @@ const TabCard = () => {
           md={1}
           sx={{
             '@media (min-width: 300px) and (max-width: 480px)': {
+              display: 'none',
+            },
+            '@media (min-width: 481px) and (max-width: 768px)': {
               display: 'none',
             },
           }}
@@ -39,20 +42,21 @@ const TabCard = () => {
           <div className="dashedLine"></div>
         </Grid>
         <Grid item lg={7} md={6} sm={12} xs={12}>
-          <Button
+          <Typography
             sx={{
+              fontWeight: 'bold',
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '3rem',
+                fontSize: '2rem',
               },
             }}
           >
             Dhaka <ArrowForwardIcon /> Dubai
-          </Button>
+          </Typography>
           <div>
             <Typography
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1rem',
                 },
               }}
             >
@@ -63,7 +67,7 @@ const TabCard = () => {
               sx={{
                 fontSize: 12,
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1rem',
                 },
               }}
               color="text.secondary"
@@ -75,7 +79,7 @@ const TabCard = () => {
             <Typography
               sx={{
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1rem',
                 },
               }}
             >
@@ -86,7 +90,7 @@ const TabCard = () => {
               sx={{
                 fontSize: 12,
                 '@media (min-width: 300px) and (max-width: 480px)': {
-                  fontSize: '2rem',
+                  fontSize: '1rem',
                 },
               }}
               color="text.secondary"
@@ -95,7 +99,15 @@ const TabCard = () => {
             </Typography>
             <br />
             {/* Travel Details */}
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                '@media (min-width: 300px) and (max-width: 480px)': {
+                  display: 'none',
+                },
+              }}
+            >
               <img
                 src="https://as1.ftcdn.net/v2/jpg/03/65/42/00/1000_F_365420014_xjsSDkKzrhq4gr9GFzP6S97H7MJyNI5B.jpg"
                 alt=""
@@ -109,7 +121,8 @@ const TabCard = () => {
                   fontSize: 12,
                   paddingLeft: 2,
                   '@media (min-width: 300px) and (max-width: 480px)': {
-                    fontSize: '2rem',
+                    fontSize: '1rem',
+                    paddingLeft: 1,
                   },
                 }}
               >
@@ -117,7 +130,7 @@ const TabCard = () => {
                 <br /> <FactCheckIcon /> Checked In 30 K <LuggageIcon />{' '}
                 Cabin:SB
               </Typography>
-            </div>
+            </Box>
           </div>
         </Grid>
         <Grid
@@ -128,7 +141,7 @@ const TabCard = () => {
           xs={12}
           sx={{
             '@media (min-width: 300px) and (max-width: 480px)': {
-              fontSize: '2rem',
+              fontSize: '1rem',
             },
           }}
         >
@@ -136,7 +149,7 @@ const TabCard = () => {
             sx={{
               fontSize: 14,
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1.2rem',
               },
             }}
             color="text.secondary"
@@ -148,7 +161,7 @@ const TabCard = () => {
             sx={{
               fontSize: 14,
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1.2rem',
               },
             }}
             color="text.secondary"
@@ -160,7 +173,7 @@ const TabCard = () => {
             sx={{
               fontSize: 14,
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1.2rem',
               },
             }}
             color="text.secondary"
@@ -172,7 +185,7 @@ const TabCard = () => {
             sx={{
               fontSize: 14,
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1.2rem',
               },
             }}
             color="text.secondary"
@@ -184,7 +197,7 @@ const TabCard = () => {
             sx={{
               fontSize: 14,
               '@media (min-width: 300px) and (max-width: 480px)': {
-                fontSize: '2rem',
+                fontSize: '1.2rem',
               },
             }}
             color="text.secondary"
@@ -197,10 +210,17 @@ const TabCard = () => {
               <span style={{ marginTop: '35px' }}></span>Show More
             </Button>
           </Stack>
-          <div
-            style={{
+          <Box
+            // style={{
+            //   display: 'flex',
+            //   justifyContent: 'spaceBetween',
+            // }}
+            sx={{
               display: 'flex',
               justifyContent: 'spaceBetween',
+              '@media (min-width: 320px) and (max-width: 480px)': {
+                display: 'none',
+              },
             }}
             className="image-space"
           >
@@ -222,11 +242,11 @@ const TabCard = () => {
               width="100%"
               height="40px"
             />
-          </div>
+          </Box>
         </Grid>
       </Grid>
       {/* <ListOfTabs></ListOfTabs> */}
-    </div>
+    </Box>
   );
 };
 

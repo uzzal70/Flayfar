@@ -12,9 +12,9 @@ import { Box, Button, Grid, Paper } from '@mui/material';
 const AddToSave = () => {
   return (
     <Paper>
-      <Card sx={{ flexGrow: 1 }} className="cart">
+      <Card sx={{ flexGrow: 1 }}>
         <Grid container spacing={1} sx={{ p: 2 }}>
-          <Grid item lg={4} md={4} sm={12} xs={12}>
+          <Grid item lg={4} md={4} sm={6} xs={12}>
             <Typography
               variant="p"
               component="div"
@@ -43,7 +43,7 @@ const AddToSave = () => {
             <Typography color="text.secondary">Sat 28 May 2022</Typography>
           </Grid>
 
-          <Grid item lg={4} md={4} sm={12} xs={12}>
+          <Grid item lg={4} md={3.5} sm={6} xs={12}>
             <Typography color="text.secondary">To</Typography>
             <Typography
               variant="p"
@@ -59,7 +59,7 @@ const AddToSave = () => {
             </Typography>
           </Grid>
           {/* ---------------- Button Start */}
-          <Grid item lg={4} md={4} sm={12} xs={12}>
+          <Grid item lg={4} md={4.5} sm={12} xs={12}>
             <Box
               style={{ display: 'flex' }}
               sx={{
@@ -67,19 +67,20 @@ const AddToSave = () => {
                   display: 'flex',
                   justifyContent: 'space-between',
                 },
+                '@media (min-width: 497px) and (max-width: 768px)': {
+                  display: 'flex',
+                  justifyContent: 'center',
+                },
               }}
             >
-              {/* <Button
-                variant="outlined"
-                sx={{ color: 'red', width: '10px', height: '2px' }}
-              >
-                <FilterVintageIcon />
-                Add To Saved
-              </Button> */}
               <Button
                 variant="outlined"
                 startIcon={<FilterVintageIcon />}
-                sx={{ color: 'red', border: '1px solid red' }}
+                // sx={{ color: 'red', border: '1px solid red' }}
+                sx={{
+                  color: 'red',
+                  border: '1px solid red',
+                }}
               >
                 Add&nbsp;To&nbsp;Saved
               </Button>

@@ -31,7 +31,7 @@
 .view-fareLine {
   /* transform: 'rotate(180deg)'; */
   border-top: 3px dotted rgb(91, 95, 91);
-  width: 50%;
+  width: 70%;
   /* margin: auto; */
   margin-top: 0.7rem;
   padding: 0px;
@@ -39,18 +39,36 @@
 .tooltipIconsSize .css-i4bv87-MuiSvgIcon-root {
   font-size: 1rem;
 }
-h6 {
+h4 {
   padding: 0;
   margin: 0;
 }
+h5 {
+  color: gray;
+  padding: 0;
+  margin: 0;
+}
+.view-fears {
+  margin:auto
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .tooltipIconsSize .css-i4bv87-MuiSvgIcon-root {
-    font-size: 2rem;
+    font-size: 0rem;
+  }
+  .tcard .view-fareLine {
+    width: 70%;
   }
   .tcard {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
   .iconbar {
     font-size: 1.5rem !important;
+  }
+  .tcard h4 {
+    font-size: 1.4rem;
+  }
+  .tcard h5 {
+    font-size: 1rem;
   }
 }
